@@ -452,6 +452,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    nav {
+        padding: 10px 10px; /* Adjust padding for smaller screens */
+    }
+
     .menu-toggle {
         display: block;
     }
@@ -505,11 +509,23 @@ footer {
         flex-direction: column;
     }
 
-    .service-grid, .pricing-table {
+    .service-grid,
+    .pricing-table {
         grid-template-columns: 1fr;
+    }
+
+    .service-item,
+    .pricing-option {
+        width: 100%;
+        padding: 15px;
     }
 
     form {
         margin-bottom: 20px;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 10px 24px;
     }
 }
