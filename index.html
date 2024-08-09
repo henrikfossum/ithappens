@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ithappens - Din IT-Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#home">ithappens</a>
+            </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="material-icons">menu</span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Hjem</a></li>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#services">Tjenester</a></li>
+                <li><a href="#pricing">Priser</a></li>
+                <li><a href="#testimonials">Anmeldelser</a></li>
+                <li><a href="#contact">Kontakt Oss</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Velkommen til ithappens</h1>
+                <p>Din pålitelige partner for automatisert leverandørdataintegrasjon og omfattende IT-støtte.</p>
+                <a href="#contact" class="cta-button">Kom i Gang</a>
+            </div>
+        </section>
+
+        <section id="about" class="content-section">
+            <h2>Om Oss</h2>
+            <p>ithappens er dedikert til å forbedre dine forretningsoperasjoner gjennom innovative teknologiløsninger. Vi spesialiserer oss på automatisert leverandørdataintegrasjon og tilbyr et bredt spekter av IT-støttetjenester for å hjelpe din bedrift å blomstre.</p>
+        </section>
+
+        <section id="services" class="content-section">
+            <h2>Våre Tjenester</h2>
+            <div class="service-cards">
+                <div class="card">
+                    <h3><span class="material-icons">cloud_upload</span> Automatisert Leverandørdataintegrasjon</h3>
+                    <p>Forenkle prosessen med å integrere leverandørdata med systemene dine, redusere feil og spare tid.</p>
+                </div>
+                <div class="card">
+                    <h3><span class="material-icons">support_agent</span> Generell IT-Støtte</h3>
+                    <p>Fra feilsøking til nettverksadministrasjon, vårt ekspertteam gir omfattende IT-støtte skreddersydd til dine behov.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="content-section">
+            <h2>Priser</h2>
+            <div class="pricing-plans">
+                <div class="plan">
+                    <div class="plan-content">
+                        <h3>Grunnleggende IT-Støtte</h3>
+                        <p>500 NOK/time</p>
+                        <ul>
+                            <li>Fjernstøtte</li>
+                            <li>Grunnleggende feilsøking</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-button">Kontakt Oss</a>
+                </div>
+                <div class="plan">
+                    <div class="plan-content">
+                        <h3>Omfattende IT-Støtte</h3>
+                        <p>1000 NOK/time</p>
+                        <ul>
+                            <li>On-site støtte</li>
+                            <li>Nettverksadministrasjon</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-button">Kontakt Oss</a>
+                </div>
+                <div class="plan">
+                    <div class="plan-content">
+                        <h3>Dataintegrasjonstjenester</h3>
+                        <p>Tilpassede Priser</p>
+                        <ul>
+                            <li>Leverandørdataintegrasjon</li>
+                            <li>Tilpassede løsninger</li>
+                        </ul>
+                    </div>
+                    <a href="#contact" class="cta-button">Kontakt Oss</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="content-section">
+            <h2>Anmeldelser</h2>
+            <div class="testimonials">
+                <blockquote>
+                    "ithappens forbedret vår dataintegrasjonsprosess betydelig, og sparte oss tid og ressurser."
+                    <cite>- Alex Brown, Bedriftseier</cite>
+                </blockquote>
+                <blockquote>
+                    "Deres IT-støtte er enestående. De hjalp oss med å løse komplekse problemer raskt og effektivt."
+                    <cite>- Lisa White, IT-leder</cite>
+                </blockquote>
+            </div>
+        </section>
+
+        <section id="contact" class="content-section contact-section">
+            <h2>Kontakt Oss</h2>
+            <div class="contact-container">
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Navn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="E-post" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" placeholder="Melding" required></textarea>
+                    </div>
+
+                    <button type="submit" class="cta-button">Send Melding</button>
+                </form>
+                <div class="contact-animation">
+                    <div class="contact-info-stats">
+                        <h3>Øk effektiviteten med våre løsninger</h3>
+                        <ul>
+                            <li><strong>Forbedre</strong> effektiviteten i din bedrift</li>
+                            <li><strong>Skreddersydd</strong> forretningsstøtte</li>
+                            <li><strong>Bygg</strong> smartere løsninger</li>                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p>Du kan også kontakte oss på:</p>
+                <a href="mailto:info@ithappens.no" class="email-link">info@ithappens.no</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ithappens. Alle rettigheter reservert.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            menuToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
