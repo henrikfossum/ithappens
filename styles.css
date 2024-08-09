@@ -5,7 +5,7 @@ body {
     padding: 0;
     line-height: 1.6;
     color: #333;
-    background-color: #f5f7fa;
+    background-color: #f8f9fa;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     display: flex;
@@ -189,138 +189,203 @@ nav {
 /* Content Sections */
 .content-section {
     padding: 80px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 40px;
     animation: fadeIn 1s ease-out forwards;
 }
 
-.content-section h2 {
-    font-size: 2.5rem;
-    color: #003366;
-    margin-bottom: 40px;
+.content-section.alt-bg {
+    background-color: #f0f0f0;
 }
 
-.content-section p {
-    font-size: 1.2rem;
+.content-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+/* Centered About Section */
+.centered-content {
     max-width: 800px;
     margin: 0 auto;
-    margin-bottom: 50px;
-    color: #666;
+    text-align: center;
+    padding: 40px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service-cards, .pricing-plans, .testimonials {
+.centered-content h2 {
+    font-size: 2.5rem;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+.centered-content p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* Services Section */
+.service-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
-.card, .plan, blockquote {
+.service-item {
     background: #ffffff;
-    padding: 25px;
-    border-radius: 15px;
+    padding: 20px;
+    border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    animation: fadeIn 1s ease-out forwards;
+    text-align: center;
 }
 
-.card:hover, .plan:hover {
+.service-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.card h3, .plan h3 {
+.service-item span {
+    font-size: 3rem;
+    color: #0077ff;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.service-item h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
     color: #003366;
 }
 
-.card p, .plan p {
+.service-item p {
     font-size: 1rem;
     color: #666;
+    margin-bottom: 0;
+}
+
+/* Pricing Section */
+.pricing-table {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing-option {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.pricing-option:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-option h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.pricing-option .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #0077ff;
+    margin-bottom: 15px;
+}
+
+.pricing-option ul {
+    list-style: none;
+    padding: 0;
     margin-bottom: 20px;
 }
 
-.plan {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-bottom: 20px;
-}
-
-.plan-content {
-    flex: 1;
-}
-
-.plan ul {
-    list-style: none;
-    padding: 0;
-}
-
-.plan ul li {
+.pricing-option ul li {
+    font-size: 1rem;
+    color: #666;
     margin-bottom: 10px;
 }
 
-.testimonials blockquote {
-    font-style: italic;
-    quotes: "“" "”" "‘" "’";
-    padding: 15px;
+/* Testimonials Section */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.testimonial {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
     position: relative;
-    animation: fadeIn 1s ease-out forwards;
+    z-index: 2;
 }
 
-.testimonials blockquote:before {
-    content: open-quote;
-    font-size: 2rem;
-    line-height: 0;
-    margin-right: 10px;
-    vertical-align: -0.4em;
-    color: #999;
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.testimonials cite {
+.testimonial p {
+    font-style: italic;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial cite {
     display: block;
-    margin-top: 10px;
     font-weight: bold;
     color: #555;
     text-align: right;
 }
 
 /* Contact Section */
-.contact-section {
+.contact-grid {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f5f7fa;
-    padding: 80px 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    margin-bottom: 40px;
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
-.contact-container {
+.contact-info {
+    flex: 1;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
     display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    max-width: 1100px;
-    width: 100%;
-    margin: 0 auto;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #003366;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
 }
 
 form {
     flex: 1;
-    margin-right: 20px;
     background: #ffffff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    font-family: 'Montserrat', sans-serif; /* Consistent font with the rest of the site */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
@@ -337,7 +402,6 @@ form textarea {
     font-size: 1rem;
     box-sizing: border-box;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    font-family: 'Montserrat', sans-serif; /* Ensure form inputs use Montserrat */
 }
 
 form input:focus,
@@ -357,58 +421,11 @@ form button {
     font-weight: 500;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
-    font-family: 'Montserrat', sans-serif; /* Ensure button uses Montserrat */
 }
 
 form button:hover {
     background: #005bb5;
     transform: translateY(-2px);
-}
-
-.contact-animation {
-    flex: 1;
-    background: linear-gradient(135deg, #004080 0%, #0080ff 100%);
-    border-radius: 8px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-}
-
-.contact-info-stats {
-    text-align: center;
-    z-index: 2;
-}
-
-.contact-info-stats h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-.contact-info-stats ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
-}
-
-.contact-info-stats li {
-    margin-bottom: 10px;
-}
-
-.contact-info {
-    margin-top: 20px;
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.contact-info p {
-    margin-bottom: 5px;
 }
 
 .email-link {
@@ -427,7 +444,6 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    animation: fadeIn 1s ease-out forwards;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -481,25 +497,19 @@ footer {
         padding: 60px 20px;
     }
 
-    .service-cards, .pricing-plans {
-        grid-template-columns: 1fr;
-    }
-
-    .plan, .card {
+    .centered-content {
         padding: 20px;
-        text-align: center;
     }
 
-    .contact-container {
+    .contact-grid {
         flex-direction: column;
     }
 
-    form {
-        margin-right: 0;
-        margin-bottom: 20px;
+    .service-grid, .pricing-table {
+        grid-template-columns: 1fr;
     }
 
-    .contact-animation {
-        height: 200px;
+    form {
+        margin-bottom: 20px;
     }
 }
