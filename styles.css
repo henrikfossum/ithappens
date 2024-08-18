@@ -23,7 +23,7 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav {
@@ -76,6 +76,7 @@ nav {
 
 .nav-links a:hover {
     color: #0077ff;
+    text-decoration: underline;
 }
 
 /* Responsive Navigation */
@@ -145,6 +146,7 @@ nav {
     padding: 0 20px;
     box-sizing: border-box;
     width: 100%;
+    animation: fadeIn 1s ease-out forwards;
 }
 
 .hero-content {
@@ -323,7 +325,6 @@ nav {
     margin-bottom: 10px;
     line-height: 1.8;
 }
-
 /* Pricing Section */
 .pricing-table {
     display: grid;
@@ -332,7 +333,7 @@ nav {
     box-sizing: border-box;
     width: 100%;
 }
-/* Pricing Section */
+
 .pricing-option {
     background: #ffffff;
     padding: 20px;
