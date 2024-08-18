@@ -90,6 +90,62 @@ nav {
     color: #0077ff;
 }
 
+/* Responsive Navigation Enhancements */
+@media (max-width: 768px) {
+    nav {
+        padding: 10px 10px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.95); /* Slightly transparent */
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.5s ease, background 0.3s ease; /* Smoother transition */
+        border-top: 1px solid #e5e5e5;
+    }
+
+    .nav-links.open {
+        max-height: 300px;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 0;
+        animation: slideDown 0.5s ease forwards;
+    }
+
+    .nav-links.open li {
+        animation-delay: calc(0.1s * var(--order));
+    }
+
+    .nav-links a {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        text-align: center;
+    }
+}
+
+/* Slide Down Animation for Mobile Menu Links */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* Hero Section */
 .hero-section {
     height: 100vh;
@@ -109,7 +165,7 @@ nav {
 .hero-content {
     z-index: 2;
     max-width: 800px;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards; /* Reduced duration for smoother animation */
     opacity: 0;
     width: 100%;
 }
@@ -117,13 +173,13 @@ nav {
 .hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    animation: fadeInUp 1.5s ease-out forwards;
+    animation: fadeInUp 1s ease-out forwards; /* Smoother transition */
 }
 
 .hero-section p {
     font-size: 1.25rem;
     margin-bottom: 30px;
-    animation: fadeInUp 2s ease-out forwards;
+    animation: fadeInUp 1.2s ease-out forwards; /* Smoother transition */
 }
 
 .cta-button {
@@ -136,13 +192,14 @@ nav {
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 2.5s ease-out forwards;
+    animation: fadeInUp 1.4s ease-out forwards; /* Reduced delay */
     opacity: 0;
 }
 
+/* Stronger CTA Button Hover Effect */
 .cta-button:hover {
     background: #f1f1f1;
-    transform: translateY(-3px);
+    transform: translateY(-5px); /* Increased transform */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -278,7 +335,9 @@ nav {
 .service-item p {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    line-height: 1.8; /* Improved readability */
+    list-style: inside;
 }
 
 /* Pricing Section */
@@ -454,6 +513,19 @@ form button:hover {
     transform: translateY(-2px);
 }
 
+/* Improved Form Submission Feedback */
+form button:after {
+    content: "✓ Sent!";
+    display: none;
+    margin-left: 10px;
+    color: #28a745;
+    font-weight: bold;
+}
+
+form button.submitted:after {
+    display: inline;
+}
+
 .email-link {
     color: #0077ff;
     text-decoration: none;
@@ -464,87 +536,77 @@ form button:hover {
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer Enhancements */
 footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 40px 0;
     position: relative;
     bottom: 0;
     width: 100%;
     margin-top: auto;
-    box-sizing: border-box;
 }
 
-/* Responsive Design */
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+footer .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer .footer-links a:hover {
+    text-decoration: underline;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer .social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+    color: #0077ff;
+}
+
+/* Responsive Design Enhancements */
 @media (max-width: 768px) {
-    nav {
-        padding: 10px 10px; /* Adjust padding for smaller screens */
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        background: #ffffff;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease;
-        border-top: 1px solid #e5e5e5;
-    }
-
-    .nav-links.open {
-        max-height: 300px;
-    }
-
-    .nav-links li {
-        margin: 15px 0;
-    }
-
-    .nav-links a {
-        font-size: 1.2rem;
-        padding: 10px 20px;
-        text-align: center;
-        display: block;
-        width: 100%;
-    }
-
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-section p {
-        font-size: 1rem;
+    .hero-section {
+        padding: 40px 20px;
+        height: 90vh; /* Adjusted height for better screen fit */
     }
 
     .content-section {
         padding: 60px 20px;
     }
 
-    .centered-content {
-        padding: 20px;
+    .service-grid,
+    .pricing-table,
+    .testimonials {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .service-item,
+    .pricing-option,
+    .testimonial {
+        width: 100%;
+        padding: 15px;
     }
 
     .contact-grid {
         flex-direction: column;
-    }
-
-    .service-grid,
-    .pricing-table {
-        grid-template-columns: 1fr;
-    }
-
-    .service-item,
-    .pricing-option {
-        width: 100%;
-        padding: 15px;
     }
 
     form {
@@ -555,4 +617,13 @@ footer {
         font-size: 1rem;
         padding: 10px 24px;
     }
+}
+
+/* Performance Optimization */
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    loading: lazy; /* Lazy load images */
 }
