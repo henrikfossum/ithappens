@@ -24,17 +24,14 @@ header {
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: background 0.3s ease;
-    box-sizing: border-box;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%; /* Ensure it adapts to the screen width */
-    margin: 0 auto;
-    padding: 10px 15px; /* Adjusted padding to avoid overflow */
+    padding: 10px 15px;
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -46,10 +43,6 @@ nav {
     transition: color 0.3s ease;
 }
 
-.logo a:hover {
-    color: #0077ff;
-}
-
 .menu-toggle {
     display: none;
     background: none;
@@ -58,10 +51,6 @@ nav {
     font-size: 2rem;
     cursor: pointer;
     transition: transform 0.3s ease;
-}
-
-.menu-toggle:hover {
-    transform: rotate(90deg);
 }
 
 .nav-links {
@@ -89,12 +78,8 @@ nav {
     color: #0077ff;
 }
 
-/* Responsive Navigation Enhancements */
+/* Responsive Navigation */
 @media (max-width: 768px) {
-    nav {
-        padding: 10px 10px;
-    }
-
     .menu-toggle {
         display: block;
     }
@@ -105,10 +90,10 @@ nav {
         left: 0;
         width: 100%;
         flex-direction: column;
-        background: rgba(255, 255, 255, 0.95); /* Slightly transparent */
+        background: rgba(255, 255, 255, 0.95);
         overflow: hidden;
         max-height: 0;
-        transition: max-height 0.5s ease, background 0.3s ease; /* Smoother transition */
+        transition: max-height 0.5s ease, background 0.3s ease;
         border-top: 1px solid #e5e5e5;
     }
 
@@ -130,6 +115,7 @@ nav {
         font-size: 1.2rem;
         padding: 10px 20px;
         text-align: center;
+        display: block;
     }
 }
 
@@ -164,7 +150,7 @@ nav {
 .hero-content {
     z-index: 2;
     max-width: 800px;
-    animation: fadeInUp 1s ease-out forwards; /* Reduced duration for smoother animation */
+    animation: fadeInUp 1s ease-out forwards;
     opacity: 0;
     width: 100%;
 }
@@ -172,13 +158,13 @@ nav {
 .hero-section h1 {
     font-size: 3.5rem;
     margin-bottom: 20px;
-    animation: fadeInUp 1s ease-out forwards; /* Smoother transition */
+    animation: fadeInUp 1s ease-out forwards;
 }
 
 .hero-section p {
     font-size: 1.25rem;
     margin-bottom: 30px;
-    animation: fadeInUp 1.2s ease-out forwards; /* Smoother transition */
+    animation: fadeInUp 1.2s ease-out forwards;
 }
 
 .cta-button {
@@ -191,14 +177,14 @@ nav {
     font-weight: 600;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    animation: fadeInUp 1.4s ease-out forwards; /* Reduced delay */
+    animation: fadeInUp 1.4s ease-out forwards;
     opacity: 0;
 }
 
 /* Stronger CTA Button Hover Effect */
 .cta-button:hover {
     background: #f1f1f1;
-    transform: translateY(-5px); /* Increased transform */
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
 }
 
@@ -324,6 +310,7 @@ nav {
     margin-bottom: 10px;
     display: inline-block;
 }
+
 .service-item h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
@@ -334,7 +321,7 @@ nav {
     font-size: 1rem;
     color: #666;
     margin-bottom: 10px;
-    line-height: 1.8; /* Improved readability */
+    line-height: 1.8;
 }
 
 /* Pricing Section */
@@ -345,7 +332,7 @@ nav {
     box-sizing: border-box;
     width: 100%;
 }
-
+/* Pricing Section */
 .pricing-option {
     background: #ffffff;
     padding: 20px;
@@ -353,7 +340,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
-    box-sizing: border-box;
 }
 
 .pricing-option:hover {
@@ -402,9 +388,6 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: left;
-    position: relative;
-    z-index: 2;
-    box-sizing: border-box;
 }
 
 .testimonial:hover {
@@ -442,10 +425,6 @@ nav {
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
 }
 
 .contact-info h3 {
@@ -516,45 +495,22 @@ footer {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
     margin-top: auto;
-}
-
-/* Keyframe Animations */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes float {
-    0% {
-        transform: translateY(0px) scale(1);
-    }
-    100% {
-        transform: translateY(-20px) scale(1.05);
-    }
+    width: 100%;
 }
 
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
     .hero-section h1 {
-        font-size: 2.8rem; /* Reduced font size for better fit */
+        font-size: 2.8rem;
     }
 
     .hero-section p {
-        font-size: 1rem; /* Reduced font size for better fit */
+        font-size: 1rem;
     }
 
     .cta-button {
-        padding: 10px 24px; /* Adjusted padding */
+        padding: 10px 24px;
     }
 
     .content-section {
@@ -564,7 +520,7 @@ footer {
     .service-grid,
     .pricing-table,
     .testimonials {
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-columns: 1fr;
     }
 
     .service-item,
