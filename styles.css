@@ -1,21 +1,22 @@
 /* General Styles */
 * {
     box-sizing: border-box;
-} /* Ensure all elements are contained within the viewport */
+}
 
 body {
+    overflow-x: hidden;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     color: #333;
     background-color: #f8f9fa;
-    overflow-x: hidden; /* Prevent horizontal scroll */
     -webkit-font-smoothing: antialiased;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     width: 100%;
+    padding-top: 60px; /* Ensure content is not hidden behind the fixed header */
 }
 
 /* Header and Navigation */
@@ -62,7 +63,7 @@ nav {
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap; /* Ensure proper wrapping on smaller screens */
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -100,6 +101,7 @@ nav {
         max-height: 0;
         transition: max-height 0.5s ease, background 0.3s ease;
         border-top: 1px solid #e5e5e5;
+        z-index: 999;
     }
 
     .nav-links.open {
@@ -508,7 +510,7 @@ footer {
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
     .hero-section h1 {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     .hero-section p {
@@ -516,7 +518,7 @@ footer {
     }
 
     .cta-button {
-        padding: 10px 24px;
+        padding: 10px 20px;
     }
 
     .content-section {
@@ -543,4 +545,13 @@ footer {
     form {
         margin-bottom: 20px;
     }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
 }
