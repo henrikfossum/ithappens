@@ -80,8 +80,8 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #0077ff;
-    text-decoration: underline;
+    color: #0077ff; /* Change to your desired hover color */
+    text-decoration: none; /* Ensure no underline is added */
 }
 
 /* Responsive Navigation */
@@ -348,6 +348,10 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 350px; /* Adjust this value to match the height of the service items */
 }
 
 .pricing-option:hover {
